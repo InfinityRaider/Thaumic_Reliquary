@@ -15,7 +15,7 @@ import flaxbeard.thaumicreliquary.research.TRRecipes;
 import flaxbeard.thaumicreliquary.research.TRResearch;
 
 
-@Mod(modid = "ThaumicReliquary", name = "Thaumic Reliquary", version = "1.1.0", dependencies="required-after:Thaumcraft;after:xreliquary")
+@Mod(modid = "ThaumicReliquary", name = "Thaumic Reliquary", version = "1.1.0.TPPI", dependencies="required-after:Thaumcraft;after:xreliquary")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false, channels={"tReliquary"}, packetHandler = TRPacketHandler.class)
 public class ThaumicReliquary {
 	
@@ -24,6 +24,7 @@ public class ThaumicReliquary {
     
     public static boolean optional;
     public static boolean disable;
+    public static boolean witherKill;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -31,6 +32,7 @@ public class ThaumicReliquary {
 		config.load();
 		optional = config.get("Options", "Allow users to enable or disable Thaumic Reliquary at will (Servers) OR Disable Thaumic Reliquary (Singleplayer)", false).getBoolean(true);
 		disable = config.get("Options", "Disable Thaumic Reliquary on servers that have it as an option.", false).getBoolean(true);
+		witherKill = config.get("Options", "Require the Witherless Rose to be reasearched prior to unlocking the Tome.", false).getBoolean(false);
 		config.save();
 	}
 	

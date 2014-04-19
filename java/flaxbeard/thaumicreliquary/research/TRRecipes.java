@@ -32,7 +32,6 @@ import xreliquary.blocks.XRBlocks;
 import xreliquary.items.XRItems;
 import xreliquary.lib.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
-import flaxbeard.thaumicexploration.ThaumicExploration;
 import flaxbeard.thaumicreliquary.ConditionalRecipe;
 
 
