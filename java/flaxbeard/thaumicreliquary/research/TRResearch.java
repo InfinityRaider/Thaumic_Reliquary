@@ -109,7 +109,7 @@ public final class TRResearch {
         research = new TRResearchItem("SOJOURNERSTAFF", "RELIQUARY", new AspectList().add(Aspect.WEAPON,6).add(Aspect.MAGIC, 6).add(Aspect.LIGHT, 2).add(Aspect.ELDRITCH, 4), 8, -3, 2, new ItemStack(XRItems.sojournerStaff)).setParents("MIDAS","FAUXLAMP").setParentsHidden("TRELIQUARY","GLOWWATER").setConcealed().registerResearchItem();
         research.setPages(new ResearchPage("1"), arcaneRecipePage("SOJOURNERSTAFF"));
         trResearch.add("SOJOURNERSTAFF");
-        research = new TRResearchItem("ALTAR", "RELIQUARY", new AspectList().add(Aspect.MAGIC, 8).add(Aspect.MECHANISM, 10).add(Aspect.LIGHT,10).add(Aspect.EXCHANGE, 4), 4, 3, 2, new ItemStack(XRBlocks.altarActive)).setParents("MIDAS", "FAUXLAMP").registerResearchItem().setParentsHidden("TRELIQUARY").setConcealed();
+        research = new TRResearchItem("ALTAR", "RELIQUARY", new AspectList().add(Aspect.MAGIC, 8).add(Aspect.MECHANISM, 10).add(Aspect.LIGHT,10).add(Aspect.EXCHANGE, 4), 4, 3, 2, new ItemStack(XRBlocks.altarActive)).setParents("MIDAS").registerResearchItem().setParentsHidden("TRELIQUARY").setConcealed();
         research.setPages(new ResearchPage("1"), arcaneRecipePage("ALTAR"));
         trResearch.add("ALTAR");
         research = new TRResearchItem("CHALICE", "RELIQUARY", new AspectList().add(Aspect.WATER,6).add(Aspect.HUNGER, 4).add(Aspect.GREED, 4), 6, 2, 2, new ItemStack(XRItems.emperorChalice)).setParents("MIDAS").setParentsHidden("TRELIQUARY").setConcealed().registerResearchItem();
@@ -133,7 +133,7 @@ public final class TRResearch {
         research.setPages(new ResearchPage("1"), infusionPage("CLOAK"));
         trResearch.add("CLOAK");
         
-        if (ThaumicReliquary.witherKill) {
+        if (!ThaumicReliquary.witherKill) {
             String[] researches = trResearch.toArray(new String[0]);
             research = new TRResearchItem("TOME", "RELIQUARY", new AspectList().add(Aspect.EXCHANGE, 16).add(Aspect.MAGIC, 16), 1, 1, 3, new ItemStack(XRItems.alkahestryTome)).registerResearchItem().setParentsHidden(researches).setConcealed().setSpecial();
             research.setPages(new ResearchPage("1"), infusionPage("TOME"));
