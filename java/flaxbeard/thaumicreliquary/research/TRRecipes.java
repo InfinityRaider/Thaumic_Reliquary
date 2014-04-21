@@ -173,7 +173,7 @@ public final class TRRecipes {
 				new ItemStack(Item.ingotGold), 
 				new ItemStack(XRItems.glowingWater),new ItemStack(Item.eyeOfEnder), new ItemStack(Item.eyeOfEnder),new ItemStack(Item.eyeOfEnder),new ItemStack(Item.eyeOfEnder));
 		
-		registerResearchItemI("LILY", new ItemStack(XRBlocks.lilypad), 3, 
+		registerResearchItemI("LILY", new ItemStack(XRBlocks.lilypad), 4, 
 				new AspectList().add(Aspect.PLANT, 8).add(Aspect.MAGIC, 8).add(Aspect.ENTROPY, 4), 
 				new ItemStack(Block.waterlily), 
 				new ItemStack(Item.appleGold, 1, 1),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META));
