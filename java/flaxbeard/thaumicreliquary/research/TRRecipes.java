@@ -176,7 +176,7 @@ public final class TRRecipes {
 		registerResearchItemI("LILY", new ItemStack(XRBlocks.lilypad), 3, 
 				new AspectList().add(Aspect.PLANT, 8).add(Aspect.MAGIC, 8).add(Aspect.ENTROPY, 4), 
 				new ItemStack(Block.waterlily), 
-				new ItemStack(Item.appleGold, 1),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META));
+				new ItemStack(Item.appleGold, 1, 1),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META),XRItems.potion(Reference.FERTILIZER_META));
 		
 	}
 
