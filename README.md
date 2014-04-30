@@ -1,4 +1,4 @@
-Thaumic_Reliquary
+Thaumic Reliquary
 =================
 Welcome to Thaumic Reliquary, a mod made to integrate Xeno's Reliquary with Thaumcraft.
 
