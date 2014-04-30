@@ -17,6 +17,7 @@ import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.item.crafting.ShapelessRecipes;
+import thaumcraft.api.ItemApi;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -25,8 +26,6 @@ import thaumcraft.api.crafting.InfusionEnchantmentRecipe;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.api.crafting.ShapelessArcaneRecipe;
-import thaumcraft.common.config.ConfigBlocks;
-import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.config.ConfigResearch;
 import xreliquary.blocks.XRBlocks;
 import xreliquary.items.XRItems;
@@ -105,11 +104,11 @@ public final class TRRecipes {
 		registerResearchItemI("MBANE", new ItemStack(XRItems.magicbane), 7, 
 				new AspectList().add(Aspect.MAGIC,8).add(Aspect.LIGHT, 8).add(Aspect.ELDRITCH, 10), 
 				new ItemStack(Item.swordGold,1,32767), 
-				new ItemStack(Item.eyeOfEnder),new ItemStack(ConfigItems.itemResource,1,15), new ItemStack(Item.eyeOfEnder),new ItemStack(Item.eyeOfEnder));
+				new ItemStack(Item.eyeOfEnder),ItemApi.getItem("itemResource", 15), new ItemStack(Item.eyeOfEnder),new ItemStack(Item.eyeOfEnder));
 		
 		registerResearchItemI("CLOAK", new ItemStack(XRItems.distortionCloak), 5, 
 				new AspectList().add(Aspect.DARKNESS,4).add(Aspect.LIGHT, 4).add(Aspect.ELDRITCH, 16), 
-				new ItemStack(ConfigItems.itemResource,1,7), 
+				ItemApi.getBlock("itemResource", 7), 
 				new ItemStack(Item.eyeOfEnder),
 				new ItemStack(Item.eyeOfEnder),
 				new ItemStack(Item.eyeOfEnder),
@@ -166,7 +165,7 @@ public final class TRRecipes {
 		registerResearchItemI("DESTCAT", new ItemStack(XRItems.destructionCatalyst), 4, 
 				new AspectList().add(Aspect.ENERGY, 16).add(Aspect.FIRE, 16).add(Aspect.MINE, 8), 
 				new ItemStack(Item.flint), 
-				new ItemStack(Item.blazeRod),new ItemStack(ConfigItems.itemResource,1,0), new ItemStack(Item.blazeRod),new ItemStack(XRItems.midasTouchstone,1,-1));
+				new ItemStack(Item.blazeRod),ItemApi.getItem("itemResource", 0), new ItemStack(Item.blazeRod),new ItemStack(XRItems.midasTouchstone,1,-1));
 		
 		registerResearchItemI("COINFORTUNE", new ItemStack(XRItems.fortuneCoin), 3, 
 				new AspectList().add(Aspect.GREED, 8).add(Aspect.HUNGER, 8).add(Aspect.ENTROPY, 4), 
@@ -210,12 +209,12 @@ public final class TRRecipes {
         		"cgc", "gbg", "wgw",
         		'c', Item.magmaCream,
         		'g', Item.ingotGold,
-        		'b', new ItemStack(ConfigBlocks.blockMetalDevice, 1, 7),
+        		'b', ItemApi.getBlock("blockMetalDevice", 7),
         		'w', XRItems.glowingWater);
         registerResearchItemShapeless("HOLYGRENADE", "HOLYGRENADE", new ItemStack(XRItems.holyHandGrenade), new AspectList().add(Aspect.ORDER, 5),
         		XRItems.glowingWater,
         		Item.goldNugget,
-        		new ItemStack(ConfigItems.itemResource,1,0));
+        		ItemApi.getItem("itemResource", 0));
         registerResearchItemShapeless("CONDDRINK", "CONDPOTS", new ItemStack(XRItems.condensedPotion,1,Reference.POTION_META), new AspectList().add(Aspect.WATER, 5),
         		new ItemStack(XRItems.condensedPotion,1,Reference.WATER_META),
         		Item.redstone,

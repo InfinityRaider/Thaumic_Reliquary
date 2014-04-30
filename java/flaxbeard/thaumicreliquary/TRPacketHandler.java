@@ -113,21 +113,22 @@ public class TRPacketHandler implements IPacketHandler
 		else
 		{
 				System.out.println(username + " has enabled Thaumic Reliquary.");
-				EntityPlayer targetPlayer = null;
-
-				List players = world.playerEntities;
-				for (Object player : players) {
-					System.out.println(player.toString());
-					if (player instanceof EntityPlayer) {
-						if (((EntityPlayer) player).username.equals(username)) {
-							targetPlayer = ((EntityPlayer) player);
-						}
-					}
-				}
-				if (targetPlayer != null) {
-					Thaumcraft.proxy.researchManager.completeResearch(targetPlayer, "TRELIQUARY");
-					
-				}
+/*				EntityPlayer targetPlayer = null;
+*
+*				List players = world.playerEntities;
+*				for (Object player : players) {
+*					System.out.println(player.toString());
+*					if (player instanceof EntityPlayer) {
+*						if (((EntityPlayer) player).username.equals(username)) {
+*							targetPlayer = ((EntityPlayer) player);
+*						}
+*					}
+*				}
+*				if (targetPlayer != null) {
+*					Thaumcraft.proxy.researchManager.completeResearch(targetPlayer, "TRELIQUARY");
+*					
+*				} 
+*/
 			}
 	}
 	

@@ -18,8 +18,7 @@ import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
-import thaumcraft.common.config.ConfigBlocks;
-import thaumcraft.common.config.ConfigItems;
+import thaumcraft.api.ItemApi;
 import thaumcraft.common.config.ConfigResearch;
 import xreliquary.blocks.XRBlocks;
 import xreliquary.items.XRItems;
@@ -31,7 +30,7 @@ public final class TRResearch {
     public static void initResearch() {
     	registerResearchPages();
         ResearchItem research;
-        research = new TRResearchItem("TRELIQUARY", "RELIQUARY", new AspectList(), 0, 0, 1, XRItems.potion(Reference.SPLASH_META)).setVirtual().registerResearchItem();
+        research = new TRResearchItem("TRELIQUARY", "RELIQUARY", new AspectList(), 0, 0, 1, XRItems.potion(Reference.SPLASH_META)).setVirtual().setAutoUnlock().registerResearchItem();
         trResearch.add("TRELIQUARY");
         research = new TRResearchItem("CONDPOTS", "RELIQUARY", new AspectList().add(Aspect.MAGIC, 4).add(Aspect.SLIME, 2).add(Aspect.WATER, 3), 0, -1, 1, XRItems.potion(Reference.SPLASH_META)).registerResearchItem().setParentsHidden("TRELIQUARY").setConcealed();
         research.setPages(new ResearchPage("1"), recipePage("VIAL"), arcaneRecipePage("CONDDRINK"), arcaneRecipePage("CONDSPLASH"), arcaneRecipePage("CONDSPEED"), arcaneRecipePage("CONDSLOW"), arcaneRecipePage("CONDSTRONG"), arcaneRecipePage("CONDWEAK"), 
@@ -88,11 +87,11 @@ public final class TRResearch {
         research = new TRResearchItem("MIDAS", "RELIQUARY", new AspectList().add(Aspect.METAL, 3).add(Aspect.CRAFT, 5).add(Aspect.EXCHANGE, 3).add(Aspect.GREED, 5), 5, 0, 1, new ItemStack(XRItems.midasTouchstone)).setParents("FAUXTRANS").setParentsHidden("TRELIQUARY").setConcealed().registerResearchItem();
         research.setPages(new ResearchPage("1"), arcaneRecipePage("MIDAS"));
         trResearch.add("FAUXTRANS");
-        research = new FauxResearchItem("FAUXALU","RELIQUARY","ALUMENTUM","ALCHEMY",5,-6,new ItemStack(ConfigItems.itemResource,1,0)).registerResearchItem();
+        research = new FauxResearchItem("FAUXALU","RELIQUARY","ALUMENTUM","ALCHEMY",5,-6, ItemApi.getItem("itemResource", 0)).registerResearchItem();
         research = new TRResearchItem("HOLYGRENADE", "RELIQUARY", new AspectList().add(Aspect.WEAPON, 3).add(Aspect.FIRE, 3).add(Aspect.ENERGY, 5).add(Aspect.GREED, 5), 6, -4, 2, new ItemStack(XRItems.holyHandGrenade)).setParents("MIDAS","FAUXALU","GLOWWATER").setParentsHidden("TRELIQUARY").setConcealed().registerResearchItem();
         research.setPages(new ResearchPage("1"), arcaneRecipePage("HOLYGRENADE"));
         trResearch.add("FAUXALU");
-        //research = new FauxResearchItem("INFUSION","RELIQUARY","INFUSION","ARTIFICE",7,-2,new ItemStack(ConfigBlocks.blockStoneDevice, 1, 2)).registerResearchItem();
+        //research = new FauxResearchItem("INFUSION","RELIQUARY","INFUSION","ARTIFICE",7,-2, ItemApi.getBlock("blockStoneDevice", 2)).registerResearchItem();
         research = new TRResearchItem("DESTCAT", "RELIQUARY", new AspectList().add(Aspect.ENTROPY,4).add(Aspect.MINE, 5).add(Aspect.FIRE, 6).add(Aspect.ENERGY, 6).add(Aspect.MAGIC, 5), 8, -5, 2, new ItemStack(XRItems.destructionCatalyst)).setParents("HOLYGRENADE","INFUSION").setParentsHidden("TRELIQUARY").setConcealed().registerResearchItem();
         research.setPages(new ResearchPage("1"), infusionPage("DESTCAT"));
         trResearch.add("DESTCAT");
@@ -105,7 +104,7 @@ public final class TRResearch {
         research = new TRResearchItem("MBANE", "RELIQUARY", new AspectList().add(Aspect.WEAPON,6).add(Aspect.MAGIC, 6).add(Aspect.LIGHT, 2).add(Aspect.ELDRITCH, 4), 9, -1, 2, new ItemStack(XRItems.magicbane)).setParents("MIDAS","INFUSION").setParentsHidden("TRELIQUARY").setConcealed().registerResearchItem();
         research.setPages(new ResearchPage("1"), infusionPage("MBANE"));
         trResearch.add("MBANE");
-        research = new FauxResearchItem("FAUXLAMP","RELIQUARY","ARCANELAMP","ARTIFICE",10,-4,new ItemStack(ConfigBlocks.blockMetalDevice, 1, 7)).registerResearchItem();
+        research = new FauxResearchItem("FAUXLAMP","RELIQUARY","ARCANELAMP","ARTIFICE",10,-4,ItemApi.getBlock("blockMetalDevice", 7)).registerResearchItem();
         research = new TRResearchItem("SOJOURNERSTAFF", "RELIQUARY", new AspectList().add(Aspect.WEAPON,6).add(Aspect.MAGIC, 6).add(Aspect.LIGHT, 2).add(Aspect.ELDRITCH, 4), 8, -3, 2, new ItemStack(XRItems.sojournerStaff)).setParents("MIDAS","FAUXLAMP").setParentsHidden("TRELIQUARY","GLOWWATER").setConcealed().registerResearchItem();
         research.setPages(new ResearchPage("1"), arcaneRecipePage("SOJOURNERSTAFF"));
         trResearch.add("SOJOURNERSTAFF");
