@@ -91,7 +91,8 @@ public final class TRResearch {
         research = new TRResearchItem("HOLYGRENADE", "RELIQUARY", new AspectList().add(Aspect.WEAPON, 3).add(Aspect.FIRE, 3).add(Aspect.ENERGY, 5).add(Aspect.GREED, 5), 6, -4, 2, new ItemStack(XRItems.holyHandGrenade)).setParents("MIDAS","FAUXALU","GLOWWATER").setParentsHidden("TRELIQUARY").setConcealed().registerResearchItem();
         research.setPages(new ResearchPage("1"), arcaneRecipePage("HOLYGRENADE"));
         trResearch.add("FAUXALU");
-        //research = new FauxResearchItem("INFUSION","RELIQUARY","INFUSION","ARTIFICE",7,-2, ItemApi.getBlock("blockStoneDevice", 2)).registerResearchItem();
+        research = new FauxResearchItem("INFUSION","RELIQUARY","INFUSION","ARTIFICE",7,-2, ItemApi.getBlock("blockStoneDevice", 2)).registerResearchItem();
+        trResearch.add("INFUSION");
         research = new TRResearchItem("DESTCAT", "RELIQUARY", new AspectList().add(Aspect.ENTROPY,4).add(Aspect.MINE, 5).add(Aspect.FIRE, 6).add(Aspect.ENERGY, 6).add(Aspect.MAGIC, 5), 8, -5, 2, new ItemStack(XRItems.destructionCatalyst)).setParents("HOLYGRENADE","INFUSION").setParentsHidden("TRELIQUARY").setConcealed().registerResearchItem();
         research.setPages(new ResearchPage("1"), infusionPage("DESTCAT"));
         trResearch.add("DESTCAT");
