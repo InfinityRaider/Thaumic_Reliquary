@@ -108,7 +108,7 @@ public final class TRRecipes {
 		
 		registerResearchItemI("CLOAK", new ItemStack(XRItems.distortionCloak), 5, 
 				new AspectList().add(Aspect.DARKNESS,4).add(Aspect.LIGHT, 4).add(Aspect.ELDRITCH, 16), 
-				ItemApi.getBlock("itemResource", 7), 
+				ItemApi.getItem("itemResource", 7), 
 				new ItemStack(Item.eyeOfEnder),
 				new ItemStack(Item.eyeOfEnder),
 				new ItemStack(Item.eyeOfEnder),
