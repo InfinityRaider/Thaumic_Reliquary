@@ -28,24 +28,24 @@ tr.tag.CONDWITHER=Power of the Nether
 tr.text.CONDWITHER.1=You have created a condensed potion that holds the power of the Wither. Anything hit by it will start to die away.
 
 --Digging Potion
-tr.name.CONDDIGGING=Elixer of Digging
+tr.name.CONDDIGGING=Elixir of Digging
 tr.tag.CONDDIGGING=I'm a dwarf and I'm digging a hole
 tr.text.CONDDIGGING.1=You have devised a new type of condensed potion that allows you to mine blocks much more quickly while under its effects. This can be used for mining ores or large building projects.
 
 --Jumping Potion
-tr.name.CONDJUMP=Elixer of Bounding
+tr.name.CONDJUMP=Elixir of Bounding
 tr.tag.CONDJUMP=Jump! Jump!
 tr.text.CONDJUMP.1=After trying and failing many times, you have created a potion that allows you to make leaps and bounds much larger than normal.
 
 --Resistance Potion
-tr.name.CONDRESIST=Elixer of Resistance
+tr.name.CONDRESIST=Elixir of Resistance
 tr.tag.CONDRESIST=Can't touch this
 tr.text.CONDRESIST.1=You have found a way to provide additional bodily protection without the use of armor. This comes in the form of a condensed potion. While under its effects, you resist more damage than usual.
 
 --Breathing Potion
-tr.name.CONDBREATHE=Elixer of Breathing
+tr.name.CONDBREATHE=Elixir of Breathing
 tr.tag.CONDBREATHE=Just keep swimming
-tr.text.CONDBREATHE.1=You can swim just like a fish when you consume your newly developed Elixer of Breathing. This condensed potion allows for breathing underwater while under its effects.
+tr.text.CONDBREATHE.1=You can swim just like a fish when you consume your newly developed Elixir of Breathing. This condensed potion allows for breathing underwater while under its effects.
 
 --Fertilizer
 tr.name.CONDFERT=Fertilizer
@@ -55,7 +55,7 @@ tr.text.CONDFERT.1=While working with condensed potions, you have developed a so
 --Fertilizer
 tr.name.LILY=Lilypad of Fertility
 tr.tag.LILY=Grow faster, damnit!
-tr.text.LILY.1=Infusing a Lilypad with some of your Mystial fertilizer and various types of essentia results in a mystical plant that can speed the growth of other plants.<BR><BR>The Lilypad of Fertility can be placed on water. Any nearby plants will grow much more quickly.
+tr.text.LILY.1=Infusing a lilypad with some of your mystical fertilizer and various types of essentia results in a mystical plant that can speed the growth of other plants.<BR><BR>The Lilypad of Fertility can be placed on water. Any nearby plants will grow much more quickly.
 
 --Glowing Water
 tr.name.GLOWWATER=Glowing Water
