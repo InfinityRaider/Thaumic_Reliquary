@@ -15,7 +15,7 @@ import flaxbeard.thaumicreliquary.research.TRRecipes;
 import flaxbeard.thaumicreliquary.research.TRResearch;
 
 
-@Mod(modid = "ThaumicReliquary", name = "Thaumic Reliquary", version = "1.1.4.TPPI", dependencies="required-after:Thaumcraft;after:xreliquary")
+@Mod(modid = "ThaumicReliquary", name = "Thaumic Reliquary", version = "1.1.5.TPPI", dependencies="required-after:Thaumcraft;after:xreliquary")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false, channels={"tReliquary"}, packetHandler = TRPacketHandler.class)
 public class ThaumicReliquary {
 	
